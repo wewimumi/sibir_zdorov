@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочные сертификаты – Сибирское здоровье</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <span class="logo__accent">Сибирское</span> здоровье
+      </div>
+            <nav class="nav">
+                <a href="index.html#hero" class="nav__link">Главная</a>
+                <a href="catalog.html" class="nav__link">Каталог</a>
+                <a href="index.html#promos" class="nav__link">Акции</a>
+                <a href="certificates.html" class="nav__link">Сертификаты</a>
+                <a href="index.html#about" class="nav__link">О компании</a>
+                <a href="index.html#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <button class="cart-button" id="cartButton">
+                Корзина
+                <span class="cart-button__count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <h1>Подарочные сертификаты «Сибирское здоровье»</h1>
+                    <p>Удобный способ подарить близким заботу о здоровье – выберите подходящий номинал и оформите заявку через форму обратной связи.</p>
+                </div>
+                <div class="hero__image" aria-hidden="true">
+                  <img src="img/maxresdefault.jpg" alt="Природа Сибири" class="hero__image__img">
+                </div>
+            </div>
+        </section>
+
+        <section class="gift">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Выберите номинал сертификата</h2>
+                </div>
+                <div class="gift-cards">
+  <div class="gift-card" data-amount="1000">
+    <div class="gift-card__amount">1 000 ₽</div>
+    <div class="gift-card__label">для небольшого подарка</div>
+    <div class="gift-card__text">Подходит для приобретения одного продукта или набора фиточаёв.</div>
+  </div>
+  
+  <div class="gift-card" data-amount="3000">
+    <div class="gift-card__amount">3 000 ₽</div>
+    <div class="gift-card__label">популярный выбор</div>
+    <div class="gift-card__text">Можно собрать комплекс: витамины, чай и средство по уходу.</div>
+  </div>
+  
+  <div class="gift-card" data-amount="5000">
+    <div class="gift-card__amount">5 000 ₽</div>
+    <div class="gift-card__label">для особого случая</div>
+    <div class="gift-card__text">Отличный вариант для значимого события или корпоративного подарка.</div>
+  </div>
+  
+  <div class="gift-card" data-amount="custom">
+    <div class="gift-card__amount">Индивидуальная сумма</div>
+    <div class="gift-card__label">под ваши задачи</div>
+    <div class="gift-card__text">Укажите желаемый номинал в сообщении при оформлении заявки.</div>
+  </div>
+</div>
+
+                <!-- Кнопка для перехода к оформлению -->
+                <div class="gift-action" style="margin-top: 32px; text-align: center;">
+                    <a href="index.html#contacts" class="btn btn--primary" id="orderCertificateBtn">
+                        Оформить заявку на сертификат
+                    </a>
+                    <p class="gift-info__text" style="margin-top: 12px; font-size: 13px;">
+                        После выбора номинала нажмите кнопку выше — вы перейдёте к форме обратной связи, 
+                        где сумма будет автоматически указана в сообщении.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gift-info">
+            <div class="container gift-info__inner">
+                <div>
+                    <h2>Формат и условия использования</h2>
+                    <ul class="certificates__list">
+                        <li>Сертификат доступен в электронном формате (PDF) для печати или отправки по e‑mail.</li>
+                        <li>Срок действия сертификата – 6 месяцев с даты активации.</li>
+                        <li>Сертификатом можно оплатить любую продукцию из каталога «Сибирское здоровье».</li>
+                        <li>Если сумма покупки больше номинала – разницу можно доплатить любым удобным способом.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Индивидуальное оформление</h2>
+                    <p class="gift-info__text">По вашему запросу мы можем подготовить сертификат с именным обращением, фирменным логотипом компании или поздравительным текстом для конкретного события (день рождения, корпоративный праздник и т.д.).</p>
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+      <div class="container contacts__inner">
+        <div>
+          <h2>Контакты</h2>
+          <p>Если у вас есть вопросы по продукции или оформлению заказа, свяжитесь с нами.</p>
+          <ul class="contacts__list">
+            <li><strong>Телефон:</strong> +7 (900) 000‑00‑00</li>
+            <li><strong>E‑mail:</strong> info@sib-health.ru</li>
+            <li><strong>Адрес офиса:</strong> г. Бирск, ул. Коммунистическая, д. 27</li>
+          </ul>
+        </div>
+                        <form class="form" id="feedbackForm">
+                            <h3>Обратная связь</h3>
+                            <div class="form__field">
+                                <label for="feedbackName">Ваше имя</label>
+                                <input class="input" id="feedbackName" name="name" required />
+                            </div>
+                            <div class="form__field">
+                                <label for="feedbackEmail">E‑mail</label>
+                                <input class="input" id="feedbackEmail" name="email" type="email" required />
+                            </div>
+                            <div class="form__field">
+                                <label for="feedbackMessage">Сообщение</label>
+                                <textarea class="textarea" id="feedbackMessage" name="message" required></textarea>
+                            </div>
+                            <button class="btn btn--primary btn--full" type="submit">Отправить</button>
+                            <div class="form__success" id="feedbackSuccess" hidden>
+                                Спасибо! Ваше сообщение отправлено.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span>© 2026 «Сибирское здоровье».</span>
+        </div>
+    </footer>
+
+    <!-- Корзина (модальное окно) -->
+    <div class="cart" id="cartPanel" aria-hidden="true">
+        <div class="cart__overlay" id="cartOverlay"></div>
+        <div class="cart__content">
+            <div class="cart__header">
+                <h3>Корзина</h3>
+                <button class="cart__close" id="cartClose">×</button>
+            </div>
+            <div class="cart__items" id="cartItems"></div>
+            <div class="cart__summary">
+                <div class="cart__row">
+                    <span>Сумма без скидки:</span>
+                    <span id="cartSubtotal">0 ₽</span>
+                </div>
+                <div class="cart__row cart__row--discount" id="cartDiscountRow" hidden>
+                    <span>Скидка по акциям:</span>
+                    <span id="cartDiscount">‑0 ₽</span>
+                </div>
+                <div class="cart__row cart__row--total">
+                    <span>Итого к оплате:</span>
+                    <span id="cartTotal">0 ₽</span>
+                </div>
+            </div>
+            <div class="cart__form">
+                <form class="form" id="orderForm">
+                    <h3>Оформление заказа</h3>
+                    <div class="form__field">
+                        <label>Имя и фамилия</label>
+                        <input type="text" class="input" name="name" required>
+                    </div>
+                    <div class="form__field">
+                        <label>Телефон</label>
+                        <input type="tel" class="input" name="phone" required>
+                    </div>
+                    <div class="form__field">
+                        <label>Способ доставки</label>
+                        <select class="select" name="delivery">
+                            <option value="pickup">Самовывоз</option>
+                            <option value="courier">Курьер по городу</option>
+                            <option value="russia">Доставка по России</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Подтвердить заказ</button>
+                    <p class="form__success" id="orderSuccess" hidden>
+                        Заказ успешно оформлен (имитация для диплома). Спасибо!
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

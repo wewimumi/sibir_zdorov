@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог товаров – Сибирское здоровье</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <span class="logo__accent">Сибирское</span> здоровье
+      </div>
+      <nav class="nav">
+        <a href="index.html#hero" class="nav__link">Главная</a>
+        <a href="#catalog" class="nav__link">Каталог</a>
+        <a href="index.html#promos" class="nav__link">Акции</a>
+        <a href="certificates.html" class="nav__link">Сертификаты</a>
+        <a href="index.html#about" class="nav__link">О компании</a>
+        <a href="index.html#contacts" class="nav__link">Контакты</a>
+      </nav>
+      <button class="cart-button" id="cartButton">
+        Корзина
+        <span class="cart-button__count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1>Каталог продукции «Сибирское здоровье»</h1>
+          <p>Выберите витамины, фиточаи и косметику, которые подходят именно вам. Для удобства используйте поиск и фильтры.</p>
+        </div>
+        <div class="hero__image" aria-hidden="true">
+  <img src="img/catalog.jpg" alt="Природа Сибири" class="hero__image__img">
+</div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <h2>Каталог товаров</h2>
+          <div class="catalog__controls">
+            <input
+              type="text"
+              id="searchInput"
+              class="input"
+              placeholder="Поиск по названию..."
+            />
+            <select id="categoryFilter" class="select">
+              <option value="all">Все категории</option>
+              <option value="vitamins">Витамины и БАДы</option>
+              <option value="tea">Фиточаи</option>
+              <option value="cosmetics">Косметика</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog__grid" id="productList">
+          <!-- Товары будут добавлены через JavaScript -->
+        </div>
+      </div>
+    </section>
+     <!-- Секция контактов -->
+        <section class="contacts" id="contacts">
+      <div class="container contacts__inner">
+        <div>
+          <h2>Контакты</h2>
+          <p>Если у вас есть вопросы по продукции или оформлению заказа, свяжитесь с нами.</p>
+          <ul class="contacts__list">
+            <li><strong>Телефон:</strong> +7 (900) 000‑00‑00</li>
+            <li><strong>E‑mail:</strong> info@sib-health.ru</li>
+            <li><strong>Адрес офиса:</strong> г. Бирск, ул. Коммунистическая, д. 27</li>
+          </ul>
+        </div>
+                        <form class="form" id="feedbackForm">
+                            <h3>Обратная связь</h3>
+                            <div class="form__field">
+                                <label for="feedbackName">Ваше имя</label>
+                                <input class="input" id="feedbackName" name="name" required />
+                            </div>
+                            <div class="form__field">
+                                <label for="feedbackEmail">E‑mail</label>
+                                <input class="input" id="feedbackEmail" name="email" type="email" required />
+                            </div>
+                            <div class="form__field">
+                                <label for="feedbackMessage">Сообщение</label>
+                                <textarea class="textarea" id="feedbackMessage" name="message" required></textarea>
+                            </div>
+                            <button class="btn btn--primary btn--full" type="submit">Отправить</button>
+                            <div class="form__success" id="feedbackSuccess" hidden>
+                                Спасибо! Ваше сообщение отправлено.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 «Сибирское здоровье».</span>
+    </div>
+  </footer>
+
+  <div class="cart" id="cartPanel" aria-hidden="true">
+    <div class="cart__overlay" id="cartOverlay"></div>
+    <div class="cart__content">
+      <div class="cart__header">
+        <h2>Корзина</h2>
+        <button class="cart__close" id="cartClose" aria-label="Закрыть корзину">×</button>
+      </div>
+      <div class="cart__items" id="cartItems">
+        <!-- Товары в корзине -->
+      </div>
+      <div class="cart__summary">
+        <div class="cart__row">
+          <span>Сумма без скидки:</span>
+          <span id="cartSubtotal">0 ₽</span>
+        </div>
+        <div class="cart__row cart__row--discount" id="cartDiscountRow" hidden>
+          <span>Скидка по акциям:</span>
+          <span id="cartDiscount">‑0 ₽</span>
+        </div>
+        <div class="cart__row cart__row--total">
+          <span>Итого к оплате:</span>
+          <span id="cartTotal">0 ₽</span>
+        </div>
+        <form class="form cart__form" id="orderForm">
+          <h3>Оформление заказа</h3>
+          <label class="form__field">
+            <span>Имя и фамилия</span>
+            <input type="text" name="fullname" class="input" required />
+          </label>
+          <label class="form__field">
+            <span>Телефон</span>
+            <input type="tel" name="phone" class="input" required />
+          </label>
+          <label class="form__field">
+            <span>Способ доставки</span>
+            <select name="delivery" class="select" required>
+              <option value="pickup">Самовывоз</option>
+              <option value="courier">Курьер по городу</option>
+              <option value="post">Доставка по России</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full">Подтвердить заказ</button>
+          <p class="form__success" id="orderSuccess" hidden>
+            Заказ успешно оформлен (имитация для диплома). Спасибо!
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
