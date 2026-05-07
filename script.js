@@ -153,7 +153,7 @@ function addToCart(productId) {
 }
 
 function changeCartQty(productId, delta) {
-    const index = cart.findIndex((item) => item.id === productId);
+    const index = cart.findIndex((item) => String(item.id) === String(productId));
     if (index === -1) return;
     cart[index].quantity += delta;
     if (cart[index].quantity <= 0) cart.splice(index, 1);
@@ -162,11 +162,10 @@ function changeCartQty(productId, delta) {
 }
 
 function removeFromCart(productId) {
-    cart = cart.filter((item) => item.id !== productId);
+    cart = cart.filter((item) => String(item.id) !== String(productId));
     saveCart();
     renderCart();
 }
-
 function openCart() {
     if (cartPanelEl) {
         cartPanelEl.classList.add("cart--open");
