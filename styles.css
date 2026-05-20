@@ -1589,3 +1589,57 @@ img {
     height: 160px;
   }
 }
+/* ===== ФИКС ГЕРОЯ НА МОБИЛЬНЫХ ===== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 20px 0;
+  }
+
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero__content {
+    width: 100%;
+  }
+
+  .hero__content h1 {
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .hero__content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .hero__image-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero__content h1 {
+    font-size: 28px;
+  }
+
+  .hero__image {
+    min-height: 180px;
+  }
+}
