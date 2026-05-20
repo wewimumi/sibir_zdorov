@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог товаров — Сибирское здоровье в Бирске</title>
+  <meta name="description" content="Каталог продукции «Сибирское здоровье» в Бирске. Витамины, фиточаи, косметика и товары для здоровья." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <span class="logo__accent">Сибирское</span> здоровье
+      </div>
+      <nav class="nav" aria-label="Навигация сайта">
+        <a href="index.html#hero" class="nav__link">Главная</a>
+        <a href="#catalog" class="nav__link" style="color: var(--color-primary-dark); font-weight: 600;">Каталог</a>
+        <a href="index.html#promos" class="nav__link">Акции</a>
+        <a href="certificates.html" class="nav__link">Сертификаты</a>
+        <a href="index.html#about" class="nav__link">О компании</a>
+      </nav>
+      <button class="cart-button" id="cartButton" aria-label="Открыть корзину">
+        Корзина
+        <span class="cart-button__count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+
+<!-- ГЕРОЙ-СЕКЦИЯ (для каталога) -->
+<section class="hero" id="hero">
+  <div class="container hero__inner">
+    <div class="hero__content">
+        <h1>Каталог продукции</h1>
+        <p>Натуральные витамины, фиточаи и косметика для здоровья, энергии и ежедневной заботы о себе. С доставкой в Бирске.</p>
+      <p>В нашем ассортименте — только проверенные средства от ведущих производителей Сибири. Мы гарантируем качество и безопасность каждого продукта.</p>
+    </div>
+    <div class="hero__image" aria-hidden="true">
+      <img src="img/catalog.jpg" alt="Природа Сибири" class="hero__image-img">
+    </div>
+    </div>
+  </div>
+</section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <h2>Каталог товаров</h2>
+        </div>
+
+        <!-- ПАНЕЛЬ УПРАВЛЕНИЯ -->
+        <div class="catalog-controls-bar">
+          <input type="text" id="searchInput" placeholder="🔍 Поиск по названию..." class="input catalog-search">
+          
+          <select id="categoryFilter" class="select catalog-select">
+            <option value="all">Все категории</option>
+            <option value="vitamins">Витамины и БАДы</option>
+            <option value="tea">Фиточаи</option>
+            <option value="cosmetics">Косметика</option>
+          </select>
+
+          <select id="sortSelect" class="select catalog-select">
+            <option value="default">Сортировка</option>
+            <option value="price-asc">Сначала дешёвые</option>
+            <option value="price-desc">Сначала дорогие</option>
+            <option value="name-asc">По названию (А-Я)</option>
+          </select>
+        </div>
+
+        
+        <!-- СЕТКА ТОВАРОВ -->
+        <div class="catalog__grid" id="productList">
+          <!-- Товары рендерятся через JS -->
+        </div>
+
+        <!-- ПУСТОЕ СОСТОЯНИЕ -->
+        <div id="emptyState" class="catalog-empty" hidden>
+          <span class="catalog-empty__icon">🔎</span>
+          <h3>Товары не найдены</h3>
+          <p>Попробуйте изменить параметры поиска или сбросить фильтры.</p>
+          <button class="btn btn--secondary" id="resetFiltersBtn">Сбросить фильтры</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- БЛОК ОБРАТНОЙ СВЯЗИ -->
+    <section class="feedback" id="feedback">
+      <div class="container">
+        <div class="feedback__grid">
+          <div class="feedback__info">
+            <div class="feedback__card">
+              <h3>Почему выбирают нас</h3>
+              <p>Тысячи довольных клиентов в Бирске уже оценили качество нашей продукции и сервис.</p>
+            </div>
+            <div class="feedback__card">
+              <h3>Быстрый ответ</h3>
+              <p>Отвечаем на сообщения в течение 1–2 часов в рабочее время. Всегда на связи.</p>
+            </div>
+            <div class="feedback__card">
+              <h3>Поможем с выбором</h3>
+              <p>Не знаете, что подойдёт именно вам? Напишите — мы подберём оптимальный вариант.</p>
+            </div>
+            <div class="feedback__card">
+              <h3>Гарантия качества</h3>
+              <p>Вся продукция сертифицирована. Если товар не подошёл — поможем с заменой.</p>
+            </div>
+          </div>
+          <div class="feedback__form-wrapper">
+            <form class="feedback__form" id="feedbackForm">
+              <h3>Заполните форму, и мы ответим</h3>
+              <label class="form__field">
+                <span>Ваше имя</span>
+                <input type="text" name="name" class="input" placeholder="Иван Иванов" required />
+              </label>
+              <label class="form__field">
+                <span>E-mail</span>
+                <input type="email" name="email" class="input" placeholder="example@mail.com" required />
+                <small class="form__hint">Введите email в формате name@mail.com</small>
+              </label>
+              <label class="form__field">
+                <span>Сообщение</span>
+                <textarea name="message" class="textarea" rows="4" placeholder="Напишите ваш вопрос..." required></textarea>
+              </label>
+              <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+              <p class="form__success" id="feedbackSuccess" hidden>✅ Спасибо! Ваше сообщение отправлено.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <p><strong>Телефон:</strong> +7 (900) 000-00-00</p>
+          <p><strong>E-mail:</strong> info@sib-health.ru</p>
+          <p><strong>Адрес:</strong> г. Бирск, ул. Коммунистическая, д. 27</p>
+        </div>
+        <div class="footer__col">
+          <h4>Режим работы</h4>
+          <p><strong>Пн–Пт:</strong> 9:00 – 18:00</p>
+          <p><strong>Сб–Вс:</strong> выходной</p>
+          <p class="footer__requisites">ИП Гарипова А.Р. | ОГРН: 1234567890123</p>
+        </div>
+        <div class="footer__col">
+          <h4>Быстрые ссылки</h4>
+          <ul class="footer__links">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="certificates.html">Сертификаты</a></li>
+            <li><a href="index.html#promos">Акции</a></li>
+            <li><a href="index.html#about">О компании</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 «Сибирское здоровье» — интернет-магазин в Бирске. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- КОРЗИНА -->
+  <div class="cart" id="cartPanel" aria-hidden="true">
+    <div class="cart__overlay" id="cartOverlay"></div>
+    <div class="cart__content" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart__header">
+        <h2 id="cartTitle">Корзина</h2>
+        <button class="cart__close" id="cartClose" aria-label="Закрыть корзину">×</button>
+      </div>
+      <div class="cart__items" id="cartItems"></div>
+      <div class="cart__summary">
+        <div class="cart__row">
+          <span>Сумма без скидки:</span>
+          <span id="cartSubtotal">0 ₽</span>
+        </div>
+        <div class="cart__row cart__row--discount" id="cartDiscountRow" hidden>
+          <span>Скидка:</span>
+          <span id="cartDiscount">−0 ₽</span>
+        </div>
+        <div class="cart__row cart__row--total">
+          <span>Итого:</span>
+          <span id="cartTotal">0 ₽</span>
+        </div>
+        <form class="form cart__form" id="orderForm">
+          <h3>Оформление заказа</h3>
+          <label class="form__field">
+            <span>Имя и фамилия</span>
+            <input type="text" name="fullname" class="input" required minlength="2" />
+          </label>
+          <label class="form__field">
+            <span>Телефон</span>
+            <input type="tel" name="phone" class="input" placeholder="+7 (900) 000-00-00" required />
+          </label>
+          <label class="form__field">
+            <span>Способ доставки</span>
+            <select name="delivery" class="select" required>
+              <option value="pickup">Самовывоз (г. Бирск)</option>
+              <option value="courier">Курьер по городу Бирск</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full">Подтвердить заказ</button>
+          <p class="form__success" id="orderSuccess" hidden>Заказ успешно оформлен. Спасибо!</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="gscript.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
