@@ -1509,3 +1509,87 @@ html {
     opacity: 0;
   }
 }
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ БАННЕРОВ ===== */
+
+@media (max-width: 768px) {
+  /* Герой-секция */
+  .hero__banner {
+    height: 180px;
+    margin-bottom: 16px;
+  }
+  
+  .hero__banner-img {
+    object-position: center;
+  }
+  
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .hero__image {
+    height: 160px;
+    order: -1;
+  }
+  
+  .hero__content h1 {
+    font-size: 22px;
+  }
+  
+  .hero__content p {
+    font-size: 14px;
+  }
+  
+  /* Карточки товаров */
+  .catalog__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .product-card {
+    padding: 10px;
+  }
+  
+  .product-card__image {
+    height: 120px;
+  }
+  
+  .product-card__title {
+    font-size: 13px;
+  }
+  
+  .product-card__desc {
+    font-size: 11px;
+  }
+  
+  .product-card__price {
+    font-size: 14px;
+  }
+  
+  .product-card__btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__banner {
+    height: 140px;
+  }
+  
+  .catalog__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero__image {
+    height: 120px;
+  }
+  
+  .gift-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .gift-card__amount {
+    font-size: 16px;
+  }
+}
