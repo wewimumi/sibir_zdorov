@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Сибирское здоровье – интернет‑магазин</title>
+  <title>Сибирское здоровье – интернет‑магазин в Бирске</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -19,9 +19,8 @@
         <a href="#promos" class="nav__link">Акции</a>
         <a href="certificates.html" class="nav__link">Сертификаты</a>
         <a href="#about" class="nav__link">О компании</a>
-        <a href="#contacts" class="nav__link">Контакты</a>
       </nav>
-      <button class="cart-button" id="cartButton">
+      <button type="button" class="cart-button" id="cartButton">
         Корзина
         <span class="cart-button__count" id="cartCount">0</span>
       </button>
@@ -30,34 +29,30 @@
 
   <main>
     <section class="hero" id="hero">
-  <div class="container">
-    <div class="hero__banner" aria-hidden="true">
-      <img src="img/banner.jpg" alt="Природа Сибири" class="hero__banner-img">
-    </div>
-    
-    <div class="hero__inner">
-      <div class="hero__content">
-        <h1>Натуральные продукты для здоровья из Сибири</h1>
-        <p>
-          Интернет‑магазин «Сибирское здоровье» – витамины, фиточаи и косметика на основе природных ингредиентов.
-        </p>
+      <div class="container">
+        <div class="hero__banner" aria-hidden="true">
+          <img src="img/banner.jpg" alt="Природа Сибири" class="hero__banner-img">
+        </div>
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h1>Натуральные продукты для здоровья из Сибири</h1>
+            <p>Интернет‑магазин «Сибирское здоровье» в Бирске – витамины, фиточаи и косметика на основе природных ингредиентов. Доставка по городу и самовывоз.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="catalog" id="catalog">
-    <div class="container">
+      <div class="container">
         <div class="section-header">
-            <h2>Популярные товары</h2>
+          <h2>Популярные товары</h2>
         </div>
-        <div id="productList" class="catalog__grid">
-        </div>
+        <div id="productList" class="catalog__grid"></div>
         <div style="text-align: center; margin-top: 24px;">
-            <a href="catalog.html" class="btn btn--primary">Перейти в полный каталог</a>
+          <a href="catalog.html" class="btn btn--primary">Перейти в полный каталог</a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <section class="promos" id="promos">
       <div class="container">
@@ -68,30 +63,19 @@
           <article class="promo-card" data-promo="immunity">
             <div class="promo-card__label">-15% на комплекс «Сила Сибири»</div>
             <h3 class="promo-card__title">Поддержка иммунитета</h3>
-            <p class="promo-card__text">
-              При покупке витаминного комплекса «Сила Сибири» вы получаете скидку 15%.
-              Акция действует при онлайн‑заказе через корзину.
-            </p>
+            <p class="promo-card__text">При покупке витаминного комплекса «Сила Сибири» вы получаете скидку 15%. Акция действует при онлайн‑заказе через корзину.</p>
             <p class="promo-card__note">Срок действия акции: до 31.12.2026</p>
           </article>
-
           <article class="promo-card" data-promo="tea">
             <div class="promo-card__label">-10% на второй фиточай</div>
             <h3 class="promo-card__title">Забота о здоровье каждый день</h3>
-            <p class="promo-card__text">
-              При покупке двух фиточаёв «Тайга детокс» или «Укрепление иммунитета»
-              скидка 10% на второй товар в чеке.
-            </p>
+            <p class="promo-card__text">При покупке двух фиточаёв «Тайга детокс» или «Укрепление иммунитета» скидка 10% на второй товар в чеке.</p>
             <p class="promo-card__note">Скидка рассчитывается автоматически при оформлении заказа.</p>
           </article>
-
           <article class="promo-card promo-card--accent" data-promo="gift">
             <div class="promo-card__label">Подарочный сертификат</div>
             <h3 class="promo-card__title">Подарите здоровье близким</h3>
-            <p class="promo-card__text">
-              Электронный подарочный сертификат на сумму 1000, 3000 или 5000 ₽.
-              Идеальный вариант подарка для тех, кто заботится о себе.
-            </p>
+            <p class="promo-card__text">Электронный подарочный сертификат на сумму 1000, 3000 или 5000 ₽. Идеальный вариант подарка для тех, кто заботится о себе.</p>
             <p class="promo-card__note">Сертификат действует 6 месяцев с момента активации.</p>
           </article>
         </div>
@@ -102,10 +86,7 @@
       <div class="container certificates__inner">
         <div>
           <h2>Сертификаты качества</h2>
-          <p>
-            Вся продукция, представленная в интернет‑магазине «Сибирское здоровье», проходит обязательную
-            сертификацию и соответствует действующим требованиям к качеству и безопасности.
-          </p>
+          <p>Вся продукция, представленная в интернет‑магазине «Сибирское здоровье», проходит обязательную сертификацию и соответствует действующим требованиям к качеству и безопасности.</p>
           <ul class="certificates__list">
             <li>Декларации о соответствии на биологически активные добавки.</li>
             <li>Сертификаты соответствия на косметическую продукцию.</li>
@@ -115,24 +96,15 @@
         <div class="certificates__cards">
           <article class="certificate-card" data-certificate="gost">
             <h3>ГОСТ и ТР ТС</h3>
-            <p>
-              Продукция разрабатывается и выпускается в соответствии с требованиями ГОСТ
-              и технических регламентов Таможенного союза.
-            </p>
+            <p>Продукция разрабатывается и выпускается в соответствии с требованиями ГОСТ и технических регламентов Таможенного союза.</p>
           </article>
           <article class="certificate-card" data-certificate="lab">
             <h3>Собственная лаборатория</h3>
-            <p>
-              Перед запуском в продажу образцы проходят внутренний контроль качества и проверки
-              на содержание активных веществ.
-            </p>
+            <p>Перед запуском в продажу образцы проходят внутренний контроль качества и проверки на содержание активных веществ.</p>
           </article>
           <article class="certificate-card" data-certificate="client">
             <h3>Прозрачность для клиентов</h3>
-            <p>
-              По запросу покупателя мы предоставляем копии сертификатов и деклараций
-              на интересующие препараты и косметику.
-            </p>
+            <p>По запросу покупателя мы предоставляем копии сертификатов и деклараций на интересующие препараты и косметику.</p>
           </article>
         </div>
       </div>
@@ -142,14 +114,8 @@
       <div class="container about__inner">
         <div class="about__text">
           <h2>О компании «Сибирское здоровье»</h2>
-          <p>
-            «Сибирское здоровье» – это сочетание природных ингредиентов и современных технологий.
-            Мы подбираем продукцию, которая помогает поддерживать иммунитет, энергичность и красоту.
-          </p>
-          <p>
-            В нашем магазине вы найдете витамины, фиточаи и косметику, созданные на основе сибирских трав,
-            растений и минералов. Вся продукция сопровождается подробным описанием и рекомендациями по применению.
-          </p>
+          <p>«Сибирское здоровье» – это сочетание природных ингредиентов и современных технологий. Мы подбираем продукцию, которая помогает поддерживать иммунитет, энергичность и красоту.</p>
+          <p>В нашем магазине вы найдете витамины, фиточаи и косметику, созданные на основе сибирских трав, растений и минералов. Вся продукция сопровождается подробным описанием и рекомендациями по применению.</p>
         </div>
         <div class="about__highlights">
           <div class="highlight-card">
@@ -168,57 +134,103 @@
       </div>
     </section>
 
-    <section class="contacts" id="contacts">
-      <div class="container contacts__inner">
-        <div>
-          <h2>Контакты</h2>
-          <p>Если у вас есть вопросы по продукции или оформлению заказа, свяжитесь с нами.</p>
-          <ul class="contacts__list">
-            <li><strong>Телефон:</strong> +7 (900) 000‑00‑00</li>
-            <li><strong>E‑mail:</strong> info@sib-health.ru</li>
-            <li><strong>Адрес офиса:</strong> г. Бирск, ул. Коммунистическая, д. 27</li>
-          </ul>
+   <section class="feedback" id="feedback">
+  <div class="container">
+    <div class="feedback__grid">
+      <!-- ЛЕВАЯ КОЛОНКА: информация для клиентов (не сертификация!) -->
+      <div class="feedback__info">
+        <div class="feedback__card">
+          <h3>Почему выбирают нас</h3>
+          <p>Тысячи довольных клиентов в Бирске уже оценили качество нашей продукции и сервис.</p>
         </div>
-
-        <form class="form" id="feedbackForm">
-          <h3>Обратная связь</h3>
+        
+        <div class="feedback__card">
+          <h3>Быстрый ответ</h3>
+          <p>Отвечаем на сообщения в течение 1–2 часов в рабочее время. Всегда на связи.</p>
+        </div>
+        
+        <div class="feedback__card">
+          <h3>Поможем с выбором</h3>
+          <p>Не знаете, что подойдёт именно вам? Напишите - мы подберём оптимальный вариант.</p>
+        </div>
+        
+        <div class="feedback__card">
+          <h3>Гарантия качества</h3>
+          <p>Вся продукция сертифицирована. Если товар не подошёл - поможем с заменой.</p>
+        </div>
+      </div>
+      
+      <div class="feedback__form-wrapper">
+        <form class="feedback__form" id="feedbackForm">
+          <h3>Заполните форму, и мы ответим в ближайшее время</h3>
+          
           <label class="form__field">
             <span>Ваше имя</span>
-            <input type="text" name="name" class="input" required />
+            <input type="text" name="name" class="input" placeholder="Иван Иванов" required />
           </label>
+          
           <label class="form__field">
-            <span>E‑mail</span>
-            <input type="email" name="email" class="input" required />
+            <span>E-mail</span>
+            <input type="email" name="email" class="input" placeholder="example@mail.com" required />
+            <small class="form__hint">Введите email в формате name@mail.com</small>
           </label>
+          
           <label class="form__field">
             <span>Сообщение</span>
-            <textarea name="message" class="textarea" rows="4" required></textarea>
+            <textarea name="message" class="textarea" rows="4" placeholder="Напишите ваш вопрос..." required></textarea>
           </label>
-          <button type="submit" class="btn btn--secondary">Отправить</button>
-          <p class="form__success" id="feedbackSuccess" hidden>
-            Спасибо! Ваше сообщение отправлено.
-          </p>
+          
+          <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+          <p class="form__success" id="feedbackSuccess" hidden>✅ Спасибо! Ваше сообщение отправлено.</p>
         </form>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <span>© 2026 «Сибирское здоровье».</span>
+  <div class="container">
+    <div class="footer__grid">
+      
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <p><strong>Телефон:</strong> +7 (900) 000-00-00</p>
+        <p><strong>E-mail:</strong> info@sib-health.ru</p>
+        <p><strong>Адрес:</strong> г. Бирск, ул. Коммунистическая, д. 27</p>
+      </div>
+      
+      <div class="footer__col">
+        <h4>Режим работы</h4>
+        <p><strong>Пн–Пт:</strong> 9:00 – 18:00</p>
+        <p><strong>Сб–Вс:</strong> выходной</p>
+        <p class="footer__requisites">ИП Гарипова А.Р. | ОГРН: 1234567890123</p>
+      </div>
+      
+      <div class="footer__col">
+        <h4>Быстрые ссылки</h4>
+        <ul class="footer__links">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="certificates.html">Сертификаты</a></li>
+          <li><a href="#promos">Акции</a></li>
+          <li><a href="#about">О компании</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <div class="footer__bottom">
+      <p>© 2026 «Сибирское здоровье» — интернет-магазин в Бирске. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
 
   <div class="cart" id="cartPanel" aria-hidden="true">
     <div class="cart__overlay" id="cartOverlay"></div>
     <div class="cart__content">
       <div class="cart__header">
         <h2>Корзина</h2>
-        <button class="cart__close" id="cartClose" aria-label="Закрыть корзину">×</button>
+        <button type="button" class="cart__close" id="cartClose" aria-label="Закрыть корзину">×</button>
       </div>
-      <div class="cart__items" id="cartItems">
-        <!-- Товары в корзине -->
-      </div>
+      <div class="cart__items" id="cartItems"></div>
       <div class="cart__summary">
         <div class="cart__row">
           <span>Сумма без скидки:</span>
@@ -236,29 +248,47 @@
           <h3>Оформление заказа</h3>
           <label class="form__field">
             <span>Имя и фамилия</span>
-            <input type="text" name="fullname" class="input" required />
+            <input
+  type="text"
+  name="name"
+  class="input"
+  autocomplete="name"
+  minlength="2"
+  required
+/>
           </label>
           <label class="form__field">
-            <span>Телефон</span>
-            <input type="tel" name="phone" class="input" required />
-          </label>
+  <span>Телефон</span>
+
+  <input
+    type="tel"
+    name="phone"
+    class="input"
+    placeholder="+79991234567"
+    pattern="(\+7|8)[0-9]{10}"
+    required
+  />
+
+  <small class="form__hint">
+    Формат: +79990000000
+  </small>
+</label>
           <label class="form__field">
             <span>Способ доставки</span>
             <select name="delivery" class="select" required>
-              <option value="pickup">Самовывоз</option>
-              <option value="courier">Курьер по городу</option>
-              <option value="post">Доставка по России</option>
+              <option value="pickup">Самовывоз (г. Бирск)</option>
+              <option value="courier">Курьер по городу Бирск</option>
             </select>
           </label>
           <button type="submit" class="btn btn--primary btn--full">Подтвердить заказ</button>
-          <p class="form__success" id="orderSuccess" hidden>
-            Заказ успешно оформлен. Спасибо!
-          </p>
+          <p class="form__success" id="orderSuccess" hidden>Заказ успешно оформлен. Спасибо!</p>
         </form>
       </div>
     </div>
   </div>
 
+  <script src="data.js"></script>
+  <script src="gscript.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
