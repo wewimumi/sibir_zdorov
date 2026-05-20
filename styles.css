@@ -34,6 +34,11 @@ body {
   min-height: 100vh;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -178,6 +183,13 @@ button {
   font-size: 20px;
 }
 
+.hero__image {
+  height: 260px;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top left, #bbf7d0, #a5d6a7);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
 
 .hero__image-img {
   width: 100%;
@@ -185,6 +197,7 @@ button {
   object-fit: cover;
 }
 
+/* Затемнение баннера (опционально) */
 .hero__banner::after {
   content: "";
   position: absolute;
@@ -192,7 +205,6 @@ button {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
   pointer-events: none;
 }
-
 /* ===== КНОПКИ ===== */
 .btn {
   display: inline-flex;
@@ -890,8 +902,8 @@ button {
 .footer {
   background: var(--color-primary-dark);
   color: #e0e7e0;
-  padding: 20px 0 20px;
-  margin-top: 30px;
+  padding: 40px 0 20px;
+  margin-top: 40px;
 }
 
 .footer__grid {
@@ -954,7 +966,7 @@ button {
 
 .footer__bottom {
   text-align: center;
-  padding-top: 0px;
+  padding-top: 24px;
   margin-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 12px;
@@ -1440,199 +1452,113 @@ html {
 .toast-notification--hide {
   animation: toastSlideOut 0.3s ease-in forwards;
 }
-/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ РАБОТЫ ===== */
+/* === БАННЕР КАТАЛОГА (исправленная версия) === */
+.hero--catalog {
+  position: relative;
+  min-height: 350px; /* Минимальная высота, чтобы текст не прилипал */
+  margin-bottom: 32px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
 
-/* Стили для страницы certificates.html */
-.hero__image-img {
+.hero--catalog .hero__banner {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  z-index: 0;
 }
 
-.gift-card {
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.gift-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-}
-
-.gift-card--selected {
-  border: 2px solid var(--color-primary);
-  background: linear-gradient(135deg, #f0fdf4, #ffffff);
-  transform: translateY(-2px);
-}
-
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
-  .cart-item {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .cart-item__qty,
-  .cart-item__remove {
-    justify-self: start;
-  }
-  
-  .cart-item__price {
-    font-size: 18px;
-  }
-}
-
-/* Анимация для тостов */
-.toast-notification--hide {
-  animation: slideOut 0.3s ease forwards;
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
-/* Убираем обводку при клике мышью, но оставляем для клавиатуры */
-.nav__link:focus {
-  outline: none;
-}
-
-/* Альтернативный стиль для фокуса (более красивый) */
-.nav__link:focus-visible {
-  outline: 2px solid var(--color-primary-light);
-  outline-offset: 2px;
-  border-radius: 999px;
-}
-/* ===== ИСПРАВЛЕНИЕ БАННЕРОВ И КАРТИНОК НА МОБИЛЬНЫХ ===== */
-
-/* Убираем конфликт высоты */
-img {
-  max-width: 100%;
+.hero--catalog .hero__banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Показывает фото полностью без обрезки */
+  object-position: center;
   display: block;
 }
 
-/* Все картинки */
-.hero__banner-img,
-.hero__image-img,
-.product-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background: #f4f7f5;
+.hero--catalog .hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 60px 0;
+  display: block;
 }
 
-/* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+.hero--catalog .hero__content h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+
+.hero--catalog .hero__content p {
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  font-size: 18px;
+}
+
+.hero--catalog .hero__stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero--catalog .hero-stat {
+  text-align: left;
+}
+
+.hero--catalog .hero-stat__number {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.hero--catalog .hero-stat__label {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптив для страницы каталога */
 @media (max-width: 768px) {
-
-  /* Главный баннер */
-  .hero__banner {
-    height: 220px;
-    overflow: hidden;
-    border-radius: var(--radius-lg);
+  .hero--catalog {
+    min-height: 350px;
   }
-
-  .hero__banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+  
+  .hero--catalog .hero__inner {
+    padding: 40px 0;
   }
-
-  /* Блок с картинкой */
-  .hero__image {
-    height: 200px;
-    overflow: hidden;
+  
+  .hero--catalog .hero__stats {
+    gap: 24px;
+    flex-wrap: wrap;
   }
-
-  .hero__image-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-  }
-
-  /* Карточки товаров */
-  .product-card__image {
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ ===== */
-@media (max-width: 480px) {
-
-  .hero__banner {
-    height: 180px;
-  }
-
-  .hero__image {
-    height: 160px;
-  }
-
-  .product-card__image {
-    height: 160px;
-  }
-}
-/* ===== ФИКС ГЕРОЯ НА МОБИЛЬНЫХ ===== */
-
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 20px 0;
-  }
-
-  .hero__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .hero__content {
-    width: 100%;
-  }
-
-  .hero__content h1 {
-    font-size: 34px;
-    line-height: 1.1;
-  }
-
-  .hero__content p {
-    font-size: 16px;
-    max-width: 100%;
-  }
-
-  .hero__image {
-    width: 100%;
-    height: auto;
-    min-height: 220px;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .hero__image-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+  
+  .hero--catalog .hero-stat__number {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 480px) {
-
-  .hero__content h1 {
-    font-size: 28px;
+  .hero--catalog {
+    min-height: 300px;
   }
-
-  .hero__image {
-    min-height: 180px;
+  
+  .hero--catalog .hero__inner {
+    padding: 30px 0;
+  }
+  
+  .hero--catalog .hero__content h1 {
+    font-size: 24px;
+  }
+  
+  .hero--catalog .hero__content p {
+    font-size: 14px;
   }
 }
